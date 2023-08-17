@@ -1,6 +1,8 @@
 #Given a positive integer n, print all combinations of numbers between 1 and n having sum n.
 
 # Backtracking 
+# Time: Exponential
+# Space: exponential
 
 def combinations_sum(n, sol, tmp, suma, index):
 
@@ -16,6 +18,11 @@ def combinations_sum(n, sol, tmp, suma, index):
     return sol
 
 if __name__ == "__main__":
+
+    combinations_sum(3, [],[],0,1)
     
-    n = 5
-    combinations_sum(n, [],[],0,1)
+    combinations_sum(4, [],[],0,1)
+
+    combinations_sum(5, [],[],0,1)
+
+    combinations_sum(6, [],[],0,1)
