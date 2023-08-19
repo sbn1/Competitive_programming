@@ -6,8 +6,8 @@
 # In this case the solution is satisfied when the lenght of the tmp is k.
 # to be used DFS
 
-#Time: 
-# Space: 
+#Time: O(k*n!/k!*(n - k)!) nCk combinatins each of lenght k
+# Space: O(k*n!/k!*(n - k)!)
 
 from typing import List
 def combinations(n, tmp:List[int], sol:List[int],k:int, index:int)->List[List[int]]:
