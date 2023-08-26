@@ -16,7 +16,7 @@ def permuations(a, index=0, sol=[]):
 
     return sol
 
-permuations([1, 2, 3])
+
 
 def permutations_1(a, sol=[], tmp=[]):
 
@@ -29,4 +29,9 @@ def permutations_1(a, sol=[], tmp=[]):
     
     return sol
 
-permutations_1([1, 2, 3, 4])
+
+
+if __name__ == "__main__":
+    
+    permuations([1, 2, 3])
+    permutations_1([1, 2, 3, 4])
