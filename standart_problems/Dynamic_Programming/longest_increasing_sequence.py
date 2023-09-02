@@ -69,7 +69,8 @@ def main(a):
     return max([left, right, combined], key=len)
 
 #Dynamic Programming Approach
-
+#Time: O(N**2)
+#Space: O(N)
 def longest_increasing_dynamic(a):
     if not a:
         return []
@@ -82,7 +83,7 @@ def longest_increasing_dynamic(a):
         #checks all the numbers up to a[i]
         for j in range(i):
 
-            if a[j] < a[j] and DP[j] > DP[i]:
+            if a[j] < a[i] and DP[j] > DP[i]:
                 # updates the longest sequences up to a[i]
                 DP[i] = DP[j]
         # Once the highest value up to a[i] has been found, it will take +1 to consider the a[i]        
@@ -91,6 +92,8 @@ def longest_increasing_dynamic(a):
     return max(DP)
 
 # Dynamic Programing Approach to display the longest increasing sequence
+# Time: O(N**2)
+#Space: O(N**2)
 def longest_increasing_seq_display(a):
     if not a:
         return []
@@ -122,3 +125,9 @@ if __name__ == "__main__":
 
     main(a_1)
     main(a_2)
+
+    longest_increasing_dynamic(a_1)
+    longest_increasing_dynamic(a_2)
+
+    longest_increasing_seq_display(a_1)
+    longest_increasing_seq_display(a_2)
