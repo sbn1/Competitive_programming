@@ -18,8 +18,8 @@ def min_cost_path(matrix, m,n):
     return min(min_cost_path(matrix, m - 1, n), min_cost_path(matrix, m, n - 1)) + matrix[m][n]
 
 # Dynamic Programming Approach 
-#Time: O(N**2)
-# Space: O(N**2)
+#Time: O(N x M)
+# Space: O(N x M)
 def min_cost_path_dynamic(matrix):
 
     DP_cost = [[float("inf") for i in range(len(matrix[0])+1)] for j in range(len(matrix)+1)]
@@ -44,4 +44,6 @@ if __name__ == "__main__":
     
     min_cost_path(matrix, len(matrix)-1, len(matrix[0])-1)
 
-    
+
+
+
