@@ -1,4 +1,4 @@
-# Given a MxN matrix, with distinctive values. Find the longest 
+# Given a N x N matrix, with distinctive values. Find the longest 
 #sequence formed by adjacent numbers in the matrix such that for each
 #number, the number of the adjacent neighbors is +1 its value
 
@@ -43,6 +43,9 @@ def longest_path(matrix):
             longestPath = max(longestPath, path_from_certain_point, key=len)
     return longestPath
 
+# Dynamic Programming Approach 
+# Time: O(N x N)
+# Space: O(N x N)
 
 def find_longest_adjacent_dynamic(matrix, i, j, stored_positions):
     if not (0 <= i < len(matrix) and 0<=j<len(matrix[0])):
