@@ -48,6 +48,7 @@ def knapsack_dynamic(values, weights, W, n, saved_paths={}):
 # Space: O(n x W)
 def knapsack_dynamic_BttmUp(values, weights, W):
     # memoization matrix
+    
     DP = [[0 for i in range(W +1)] for j in range(len(values) + 1)]
 
     for i in range(1, len(values)+1):
