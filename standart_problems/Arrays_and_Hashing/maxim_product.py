@@ -10,9 +10,12 @@ def FindMaxProduct(a):
     for i in range(1, len(a)):
         max_product = max(max_product, max_product*a[i], min_product*a[i])
         min_product = min(min_product, min_product*a[i])
-    return max_product
+    return max_product, min_product
 
 if __name__ == '__main__':
     
     a = [-6, 4, -5, 8, -10, 8]
+    FindMaxProduct(a)
+
+    a = [-6, 4, -5, 8, -10]
     FindMaxProduct(a)
