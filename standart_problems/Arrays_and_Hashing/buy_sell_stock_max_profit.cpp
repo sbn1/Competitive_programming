@@ -31,6 +31,25 @@ int find_max_profit(int arr[], int n)
 
 }
 
+int find_max_profit_alt(int arr[], int n){
+
+    int local_min_pozition = 0, profit=0;
+    
+    for (int i=1; i < n; i++)
+    {
+        if (arr[i] < arr[i-1]) {
+            local_min_pozition = i;
+        }
+
+        if ((arr[i] >= arr[i-1]) &&((i + 1 == n) || (arr[i + 1] < arr[i]))){
+            
+            profit += arr[i] - arr[local_min_pozition];
+        }
+    }
+
+    return profit;
+}
+
 int main()
 {
     int arr[] = {1, 5, 2, 3, 7, 6, 4, 5};
@@ -40,6 +59,6 @@ int main()
     int n = sizeof(arr)/sizeof(arr[0]);
 
     cout<< "Max Profit: "<< find_max_profit(arr, n)<<endl;
-
+    cout<< "Max Profit: "<< find_max_profit_alt(arr, n)<<endl;
     return 0;
 }
