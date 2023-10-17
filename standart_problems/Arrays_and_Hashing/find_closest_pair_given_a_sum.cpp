@@ -4,8 +4,12 @@
 
 using namespace std;
 
+//Time: O(N)
+//Space: O(1)
+
 pair<int, int> find_pair(int A[],int B[],  int n,int m, int target)
 {
+    //The position will track the last pair that is clossest to the target
     int position_a = 0, position_b = m-1;
 
     for (int i = 0, j=n-1; (i < n)&&(j >=0);)
@@ -39,9 +43,11 @@ int main()
     int n = sizeof(A)/sizeof(A[0]);
     int m = sizeof(B)/sizeof(B[0]);
 
-    pair<int, int> p = find_pair(A, B, n, m, target);
+    //pair<int, int> p = find_pair(A, B, n, m, target);
+    //cout<<"("<<p.first<<","<<p.second<<")"<<endl;
 
-    cout<<"("<<p.first<<","<<p.second<<")"<<endl;
+    cout<<"["<<find_pair(A, B, n, m, target).first<<","<<find_pair(A, B, n, m, target).second<<"]"<<endl;
+
 
     return 0;
 }
