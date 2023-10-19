@@ -1,5 +1,4 @@
 #include <iostream>
-#include <climits>
 #include <algorithm>
 
 
@@ -22,7 +21,8 @@ void find_triplets_max_product(int arr[], int n)
     }
     
 }
-
+//Time: O(N)
+//Space: O(1)
 void find_tripleats_max_product_optimal(int arr[], int n)
 {
     int max_1 = -1, max_2 = -1, max_3 = -1;
@@ -49,7 +49,7 @@ void find_tripleats_max_product_optimal(int arr[], int n)
     }
 
     int min_1 = 0, min_2 = -1;
-    
+
 
     for (int i =1; i < n; i++)
     {
@@ -64,14 +64,13 @@ void find_tripleats_max_product_optimal(int arr[], int n)
         }
     }
 
-    std::cout<<arr[min_1]<<"  "<<arr[min_2]<<std::endl;
-    // if (arr[max_1]*arr[max_2]*arr[max_3] > arr[min_1]*arr[min_2]*arr[max_1]){
+    if (arr[max_1]*arr[max_2]*arr[max_3] > arr[min_1]*arr[min_2]*arr[max_1]){
 
-    //     std::cout<<arr[max_1]<<" "<<arr[max_2]<<" "<<arr[max_3]<<std::endl;
-    // }
-    // else {
-    //     std::cout<<arr[min_1]<<" "<<arr[min_2]<<" "<<arr[max_1]<<std::endl;
-    // }
+        std::cout<<arr[max_1]<<" "<<arr[max_2]<<" "<<arr[max_3]<<std::endl;
+    }
+    else {
+        std::cout<<arr[min_1]<<" "<<arr[min_2]<<" "<<arr[max_1]<<std::endl;
+    }
 
     
 
