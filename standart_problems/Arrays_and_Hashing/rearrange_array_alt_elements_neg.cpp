@@ -3,7 +3,7 @@
 //group the negative and the positive elements
 int rearrange_array_find_nr_neg(int arr[], int n)
 {
-    int j = 0; //stores nr of negative elements
+    int j = 0; //stores nr of negative elements, how many times it swaps
 
     for (int i=0; i < n; i++)
     {
