@@ -6,8 +6,8 @@
 #include <utility>
 
 //
-bool waterfall_sort(std::tuple<int, int, int> const &a, 
-                    std::tuple<int, int, int> const &b)
+bool waterfall_sort(const std::tuple<int, int, int> &a, 
+                    const std::tuple<int, int, int>  &b)
                     {
                         if (std::get<1>(a) != std::get<1>(b))
                         {
